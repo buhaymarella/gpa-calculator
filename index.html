@@ -22,20 +22,21 @@
 
             <div class="form__group">
               <label for="score" class="form__label">Score:</label>
-              <input type="text" name="" id="score" class="form__input" />
+              <input type="text" name="score" id="score" placrholder="score"class="form__input" />
             </div>
             <div class="form__group">
               <label for="no_items" class="form__label">Number of Items:</label>
-              <input type="text" name="" id="noItems" class="form__input" />
+              <input type="text" name="noItems" id="noItems" class="form__input"/>
             </div>
             <div class="form__group">
               <label for="gpa" class="form__label">GPA:</label>
               <input
-                type=""
+                type="text"
                 name="gpa"
                 id="scoreGpa"
                 class="form__input"
                 disabled
+                style="color: #fff;"
               />
             </div>
             <div class="text-center">
@@ -44,19 +45,21 @@
                 value="Reset"
                 class="btn btn__link"
                 id="btnReset"
+                onclick="reset(); document.getElementById('rem').innerHTML= ''; "
               />
               <input
-                type="submit"
+                type="button"
                 value="Calculate"
                 class="btn btn__primary"
                 id="btnCalc"
+                onclick="calcGpa(); return false;"
               />
             </div>
           </form>
         </div>
         <div class="remarks__container flow-content">
           <h3 class="remarks__title">Remarks</h3>
-          <p class="remarks__text"></p>
+          <p class="remarks__text" name="res" id="rem"></p>
         </div>
       </div>
       <img src="images/Vector.svg" class="wave-1" alt="" />
@@ -64,6 +67,9 @@
       <img src="images/Vector-2.svg" class="wave-3" alt="" />
     </div>
 
-    <script src="scripts/app.js"></script>
+    <script src="scripts/app.js">
+
+        
+    </script>
   </body>
 </html>
